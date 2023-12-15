@@ -9,10 +9,10 @@ const Img = ({
   return (
     <img
       className={className}
-      src={src}
+      src={require(src)}
       alt={alt}
       {...restProps}
-      loading={"lazy"}
+    //  loading={"lazy"}
     />
   );
 };

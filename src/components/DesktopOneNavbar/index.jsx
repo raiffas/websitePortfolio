@@ -21,7 +21,8 @@ const DesktopOneNavbar = (props) => {
           <button onClick={() => props.handleClick(2)} className="md:text-3xl sm:text-[28px] text-[32px] text-white-A700 w-auto"
               size="txtKirangHaerangRegular32">{props?.projectsbuttontext}</button>
         </div>
-        <Img className="h-12 w-12" src="images/img_frame.svg" />
+        <Img className="h-12 w-12" src='' />
+        <Img src="/images/pinwOutline.png" />
       </div>
     </>
   );
