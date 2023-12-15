@@ -1,18 +1,35 @@
 import React from "react";
+import {useRef, createRef} from 'react';
+import { useState } from 'react';
+import Headroom from "react-headroom";
 
 import { Img, List, Text } from "components";
 import DesktopOneNavbar from "components/DesktopOneNavbar";
 
 const DesktopOnePage = () => {
+  let pageRef = [useRef(null),useRef(null),useRef(null)];
+  const scrollToRef = ref => ref.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToPane = num => scrollToRef(pageRef[num]);
+  function handleClick(index) {
+    scrollToPane(index)
+  }
+ 
   return (
     <>
       <div className="bg-black-900 flex flex-col font-kiranghaerang items-center justify-start mx-auto w-full">
         <div className="flex flex-col gap-[9px] items-start justify-start w-auto md:w-full">
-          <header className="flex flex-col items-center justify-center px-40 md:px-5 py-12 w-full">
-            <DesktopOneNavbar className="flex sm:flex-col flex-row md:gap-10 gap-40 items-center justify-end max-w-[1440px] md:px-10 sm:px-5 px-[180px] w-full" />
-          </header>
+
+          <Headroom className="w-full">
+            <header className="flex flex-col items-center justify-end md:px-5 py-12 w-full">
+              <DesktopOneNavbar handleClick={handleClick} className="flex sm:flex-col flex-row md:gap-10 gap-40 items-center justify-end max-w-[1440px] md:px-10 sm:px-5 px-[180px] w-full" />
+            </header>         
+            </Headroom>
+            
+          
+
           <div className="flex flex-col font-jura h-[5716px] md:h-auto items-center justify-start max-w-[1440px] w-full">
-            <div className="h-[1024px] md:h-[862px] pb-[55px] md:px-5 px-[55px] relative w-full">
+            
+            <div key={"elemHome"} ref={pageRef[0]} className="h-[1024px] md:h-[862px] pb-[55px] md:px-5 px-[55px] relative w-full">
               <div className="absolute bottom-[21%] flex flex-col gap-2.5 h-[269px] md:h-auto inset-x-[0] items-start justify-start mx-auto w-auto">
                 <div className="font-kiranghaerang md:h-[163px] h-[166px] relative w-full">
                   <Text
@@ -40,7 +57,8 @@ const DesktopOnePage = () => {
                 alt="headshottranspa"
               />
             </div>
-            <div className="flex flex-col items-start justify-center max-w-[1440px] w-full">
+            
+            <div key={"elemBio"} ref={pageRef[1]} className="flex flex-col items-start justify-center max-w-[1440px] w-full">
               <div className="flex flex-col h-[1024px] items-center justify-center max-w-[1440px] px-2.5 w-full">
                 <div className="flex flex-col gap-[17px] h-[621px] md:h-auto items-center justify-center max-w-[877px] mx-auto md:px-5 w-full">
                   <Img
@@ -186,7 +204,8 @@ const DesktopOnePage = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col md:gap-10 gap-[100px] h-[2000px] md:h-auto items-start justify-start max-w-[1440px] w-full">
+
+            <div key={"elemProj"} ref={pageRef[2]} className="flex flex-col md:gap-10 gap-[100px] h-[2000px] md:h-auto items-start justify-start max-w-[1440px] w-full">
               <div className="flex flex-col gap-[43px] items-center justify-start max-w-[1440px] w-full">
                 <Text
                   className="md:text-3xl sm:text-[28px] text-[32px] text-center text-white-A700 w-auto"
@@ -238,7 +257,7 @@ const DesktopOnePage = () => {
                         </>
                       </span>
                       <span className="text-red-A100 font-jura text-left font-normal">
-                        Video Link
+                        Video Link (coming soon)
                       </span>
                     </Text>
                   </div>
@@ -271,7 +290,7 @@ const DesktopOnePage = () => {
                         </>
                       </span>
                       <span className="text-red-A100 font-jura text-left font-normal">
-                        Publication Link
+                        Publication Link (coming soon)
                       </span>
                     </Text>
                   </div>
@@ -353,7 +372,7 @@ const DesktopOnePage = () => {
                           </>
                         </span>
                         <span className="text-red-A100 font-jura text-left font-normal">
-                          Project Link
+                        <a href="https://s2023.siggraph.org/presentation/?id=histc_140&sess=sess422" rel="noreferrer">Project Link</a>
                         </span>
                       </Text>
                     </div>
@@ -377,7 +396,7 @@ const DesktopOnePage = () => {
                           </>
                         </span>
                         <span className="text-red-A100 font-jura text-left font-normal">
-                          Project Link
+                        <a href="https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=86d8441d99a84425be2f9372ee6e17ea&metadata=01" rel="noreferrer">Project Link</a>
                         </span>
                       </Text>
                     </div>
@@ -414,15 +433,7 @@ const DesktopOnePage = () => {
                           </>
                         </span>
                         <span className="text-red-A100 font-jura text-left font-normal">
-                          Program Link
-                        </span>
-                        <span className="text-white-A700 font-jura text-left font-normal">
-                          <>
-                            {" "}
-                            &lt;https://stem.ucf.edu/wp-content/uploads/
-                            <br />
-                            2023/04/2023-NCWIT-Aic-Program-Full-1.pdf&gt;
-                          </>
+                          <a href="https://stem.ucf.edu/wp-content/uploads/2023/04/2023-NCWIT-Aic-Program-Full-1.pdf" rel="noreferrer">Program Link</a>
                         </span>
                       </Text>
                     </div>
@@ -442,7 +453,7 @@ const DesktopOnePage = () => {
                             “Building a Successful Imaging Project in the
                             Digital Humanities”
                             <br />
-                            History and LIterature Master’s Program, Columbia
+                            History and Literature Master’s Program, Columbia
                             University
                             <br />
                             Paris, France
@@ -452,15 +463,7 @@ const DesktopOnePage = () => {
                           </>
                         </span>
                         <span className="text-red-A100 font-jura text-left font-normal">
-                          Program Link
-                        </span>
-                        <span className="text-white-A700 font-jura text-left font-normal">
-                          <>
-                            {" "}
-                            &lt;https://globalcenters.columbia.edu/sites
-                            <br />
-                            /default/files/content/Paris/Publications/digital%20humanities.pdf&gt;
-                          </>
+                          <a href="https://globalcenters.columbia.edu/sites/default/files/content/Paris/Publications/digital%20humanities.pdf" rel="noreferrer">Program Link</a>
                         </span>
                       </Text>
                     </div>
@@ -469,6 +472,7 @@ const DesktopOnePage = () => {
               </List>
             </div>
           </div>
+
           <div className="flex flex-col font-kiranghaerang md:gap-10 gap-[0] h-[281px] md:h-auto items-center justify-center max-w-[1440px] md:px-10 sm:px-5 px-[236px] py-[78px] w-full">
             <Img
               className="h-12 w-[47px]"
@@ -477,10 +481,10 @@ const DesktopOnePage = () => {
             />
             <Text
               className="md:text-3xl sm:text-[28px] text-[32px] text-center text-white-A700"
-              size="txtKirangHaerangRegular32"
+              size="txtKirangHaerangRegular16"
             >
               <>
-                website last updated: 11/22/2023
+                website under construction, last updated: 11/27/2023
                 <br />
                 email me at raiffa.syamil [at] ucf.edu -- feedback and creative
                 ideas welcome!
