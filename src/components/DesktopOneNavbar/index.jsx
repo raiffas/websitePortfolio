@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Img, Text } from "components";
-import mainLogo from'./pinwOutline.png';
 import logo from './img_frame1.svg'
 
 const DesktopOneNavbar = (props) => {
