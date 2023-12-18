@@ -6,6 +6,10 @@ import Headroom from "react-headroom";
 import { Img, List, Text } from "components";
 import DesktopOneNavbar from "components/DesktopOneNavbar";
 
+import headshot from './img_headshottransparent.png'
+import frame1 from './img_frame_red_a100.svg'
+import logo from '../../components/DesktopOneNavbar/img_frame1.svg'
+
 const DesktopOnePage = () => {
   let pageRef = [useRef(null),useRef(null),useRef(null)];
   const scrollToRef = ref => ref.current.scrollIntoView({ behavior: "smooth" });
@@ -51,21 +55,14 @@ const DesktopOnePage = () => {
                   </>
                 </Text>
               </div>
-              <Img
-                className="absolute h-[862px] object-cover right-[5%] top-[0] w-[41%]"
-                src="images/img_headshottransparent.png"
-                alt="headshottranspa"
-              />
+              
+              <img src={headshot} className="absolute h-[862px] object-cover right-[5%] top-[0] w-[41%]"  alt="me" />
             </div>
             
             <div key={"elemBio"} ref={pageRef[1]} className="flex flex-col items-start justify-center max-w-[1440px] w-full">
               <div className="flex flex-col h-[1024px] items-center justify-center max-w-[1440px] px-2.5 w-full">
                 <div className="flex flex-col gap-[17px] h-[621px] md:h-auto items-center justify-center max-w-[877px] mx-auto md:px-5 w-full">
-                  <Img
-                    className="h-[283px] w-[283px]"
-                    src="images/img_frame_red_a100.svg"
-                    alt="frame_One"
-                  />
+                <img src={frame1} className="h-[283px] w-[283px]"  alt="frame" />
                   <Text
                     className="md:text-3xl sm:text-[28px] text-[32px] text-center text-white-A700"
                     size="txtJuraBold32"
@@ -107,11 +104,7 @@ const DesktopOnePage = () => {
               </div>
               <div className="flex flex-col h-[1024px] items-center justify-center max-w-[1440px] px-2.5 w-full">
                 <div className="flex flex-col gap-[17px] items-center justify-center max-w-[1058px] mx-auto md:px-5 w-full">
-                  <Img
-                    className="h-[283px] w-[283px]"
-                    src="images/img_frame_red_a100.svg"
-                    alt="frame_Two"
-                  />
+                  <img src={frame1} className="h-[283px] w-[283px]"  alt="frame" />
                   <Text
                     className="md:text-3xl sm:text-[28px] text-[32px] text-center text-white-A700"
                     size="txtJuraBold32"
@@ -157,11 +150,7 @@ const DesktopOnePage = () => {
               </div>
               <div className="flex flex-col h-[1024px] items-center justify-center max-w-[1440px] px-2.5 w-full">
                 <div className="flex flex-col gap-[17px] items-center justify-center max-w-[990px] mx-auto md:px-5 w-full">
-                  <Img
-                    className="h-[283px] w-[283px]"
-                    src="images/img_frame_red_a100.svg"
-                    alt="frame_Three"
-                  />
+                <img src={frame1} className="h-[283px] w-[283px]"  alt="frame" />
                   <Text
                     className="md:text-3xl sm:text-[28px] text-[32px] text-center text-white-A700"
                     size="txtKirangHaerangRegular32"
@@ -474,17 +463,13 @@ const DesktopOnePage = () => {
           </div>
 
           <div className="flex flex-col font-kiranghaerang md:gap-10 gap-[0] h-[281px] md:h-auto items-center justify-center max-w-[1440px] md:px-10 sm:px-5 px-[236px] py-[78px] w-full">
-            <Img
-              className="h-12 w-[47px]"
-              src="images/img_frame.svg"
-              alt="frame_Four"
-            />
+          <img src={logo} className="h-12 w-12"  alt="logo" />
             <Text
               className="md:text-3xl sm:text-[28px] text-[32px] text-center text-white-A700"
               size="txtKirangHaerangRegular16"
             >
               <>
-                website under construction, last updated: 11/27/2023
+                website under construction, last updated: 12/18/2023
                 <br />
                 email me at raiffa.syamil [at] ucf.edu -- feedback and creative
                 ideas welcome!
