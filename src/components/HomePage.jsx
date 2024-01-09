@@ -14,7 +14,7 @@ export function HomePage( { pageRef } ) {
                   <div className="absolute bg-white-A700 bottom-[0] h-[13px] inset-x-[0] mx-auto w-full"></div>
                 </div>
                 <Text
-                  className="md:text-3xl sm:text-[28px] text-[32px] text-white-A700"
+                  className="md:text-3xl sm:text-[28px] text-[32px] text-white-A700 bg"
                   size="txtJuraRegular32"
                 >
                   <>
@@ -24,6 +24,7 @@ export function HomePage( { pageRef } ) {
                   </>
                 </Text>
               </div>
+              
               
               <img src={headshot} className="absolute h-[862px] object-cover right-[5%] top-[0] w-[41%]"  alt="me" />
             </div>

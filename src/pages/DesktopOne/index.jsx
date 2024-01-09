@@ -11,8 +11,6 @@ import { BioPage } from "components/BioPage";
 import { ProjectPage } from "components/ProjectPage";
 
 
-
-
 const DesktopOnePage = () => {
   let pageRef = [useRef(null),useRef(null),useRef(null)];
   const scrollToRef = ref => ref.current.scrollIntoView({ behavior: "smooth" });
@@ -30,7 +28,7 @@ const DesktopOnePage = () => {
               <DesktopOneNavbar handleClick={handleClick} className="flex sm:flex-col flex-row md:gap-10 gap-40 items-center justify-end max-w-[1440px] md:px-10 sm:px-5 px-[180px] w-full" />
             </header>         
             </Headroom>
-          <div className="flex flex-col font-jura h-[5716px] md:h-auto items-center justify-start max-w-[1440px] w-full">
+          <div className="flex flex-col font-jura h-[6500px] md:h-auto items-center justify-start max-w-[1440px] w-full">
             <HomePage pageRef={pageRef[0]} />
             <BioPage pageRef={pageRef[1]} />
             <ProjectPage pageRef={pageRef[2]} />

@@ -10,7 +10,7 @@ export function DesktopFooter() {
               size="txtKirangHaerangRegular16"
             >
               <>
-                website under construction, last updated: 12/18/2023
+                website under construction, last updated: 1/9/2024
                 <br />
                 email me at raiffa.syamil [at] ucf.edu -- feedback and creative
                 ideas welcome!
