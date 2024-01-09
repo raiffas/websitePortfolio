@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/websitePortfolio/static/css/main.f254f0e6.css",
-    "main.js": "/websitePortfolio/static/js/main.d9647bb5.js",
-    "static/js/625.bf0141b2.chunk.js": "/websitePortfolio/static/js/625.bf0141b2.chunk.js",
+    "main.css": "/websitePortfolio/static/css/main.4958a35d.css",
+    "main.js": "/websitePortfolio/static/js/main.8128a190.js",
+    "static/js/961.e1b23e98.chunk.js": "/websitePortfolio/static/js/961.e1b23e98.chunk.js",
     "static/js/499.1487ee5e.chunk.js": "/websitePortfolio/static/js/499.1487ee5e.chunk.js",
     "static/media/KirangHaerangRegular.ttf": "/websitePortfolio/static/media/KirangHaerangRegular.bcd168525fd387546c75.ttf",
     "static/media/img_headshottransparent.png": "/websitePortfolio/static/media/img_headshottransparent.24a4c2561449f68baa90.png",
     "static/media/JuraRegular.ttf": "/websitePortfolio/static/media/JuraRegular.0a4ac78909358bf67d67.ttf",
     "static/media/JuraBold.ttf": "/websitePortfolio/static/media/JuraBold.ebc36b579e40c6b39a15.ttf",
-    "static/media/pinwOutline.png": "/websitePortfolio/static/media/pinwOutline.5b41182c115acde1c43c.png",
     "static/media/img_frame_red_a100.svg": "/websitePortfolio/static/media/img_frame_red_a100.e9e0538caa100a67e706f10fad91694d.svg",
     "index.html": "/websitePortfolio/index.html",
     "static/media/img_frame1.svg": "/websitePortfolio/static/media/img_frame1.b1303f3ee605fb0d3c1793b828521ab6.svg",
-    "main.f254f0e6.css.map": "/websitePortfolio/static/css/main.f254f0e6.css.map",
-    "main.d9647bb5.js.map": "/websitePortfolio/static/js/main.d9647bb5.js.map",
-    "625.bf0141b2.chunk.js.map": "/websitePortfolio/static/js/625.bf0141b2.chunk.js.map",
+    "main.4958a35d.css.map": "/websitePortfolio/static/css/main.4958a35d.css.map",
+    "main.8128a190.js.map": "/websitePortfolio/static/js/main.8128a190.js.map",
+    "961.e1b23e98.chunk.js.map": "/websitePortfolio/static/js/961.e1b23e98.chunk.js.map",
     "499.1487ee5e.chunk.js.map": "/websitePortfolio/static/js/499.1487ee5e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f254f0e6.css",
-    "static/js/main.d9647bb5.js"
+    "static/css/main.4958a35d.css",
+    "static/js/main.8128a190.js"
   ]
 }
